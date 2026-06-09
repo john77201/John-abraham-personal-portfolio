@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio — BCA Graduate | Software Developer & Creative Technologist" />
+  <title>Your Name | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo" id="navLogo"><span class="logo-code">&lt;/&gt;</span> <span id="logoName">John<span class="logo-dot">.</span>Abraham</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#skills">Skills &amp; SQL</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="resume/resume.pdf" class="nav-cta" download>Resume</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-lines"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-badge reveal">
+          <span class="pulse-dot"></span>
+          Available for opportunities
+        </p>
+        <h1 class="hero-title reveal">
+          <span class="line">Hi, I'm</span>
+          <span class="line name-gradient" id="heroName">Your Name</span>
+        </h1>
+        <p class="hero-subtitle reveal">
+          BCA Graduate · <span id="typedText"></span><span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-desc reveal">
+          I craft clean code and thoughtful digital experiences — blending logic from computer science with creative problem-solving.
+        </p>
+        <div class="hero-social-row reveal">
+          <a href="#" id="heroGithub" class="social-icon-btn github" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="#" id="heroLinkedin" class="social-icon-btn linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" id="heroFacebook" class="social-icon-btn facebook" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="#" id="heroInstagram" class="social-icon-btn instagram" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" id="heroWhatsapp" class="social-icon-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.066 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="mailto:johnabraham4835@gmail.com" id="heroGmail" class="social-icon-btn gmail" target="_blank" rel="noopener" aria-label="Gmail">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="4">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="5">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="profile-blob-wrap">
+          <div class="profile-bubble">
+            <img src="Images/profile_cutout.png" alt="John Abraham" class="profile-bubble-img" />
+          </div>
+          <div class="profile-blob-dot dot-1"></div>
+          <div class="profile-blob-dot dot-2"></div>
+          <div class="floating-tag tag-1">Problem Solver</div>
+          <div class="floating-tag tag-2">Full-Stack</div>
+          <div class="floating-tag tag-3">Clean Code</div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span>Scroll</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">01 — About</span>
+          <h2 class="section-title">Turning ideas into <em>impactful</em> software</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a passionate <strong>BCA (Bachelor of Computer Applications)</strong> graduate with a strong foundation in programming, databases, and web technologies. I love building applications that are both functional and delightful to use.
+            </p>
+            <p>
+              From academic projects to personal builds, I've explored full-stack development, UI design, and problem-solving through code. I'm eager to contribute to teams that value innovation, clean architecture, and continuous learning.
+            </p>
+            <ul class="about-highlights">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Strong in OOP, DSA & DBMS
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Web & mobile-ready interfaces
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Team player · quick learner
+              </li>
+            </ul>
+            <a href="resume/resume.pdf" class="btn btn-outline" download>Download Resume</a>
+          </div>
+          <div class="about-cards reveal">
+            <article class="info-card">
+              <span class="info-icon">🎓</span>
+              <h3>BCA Graduate</h3>
+              <p>Computer Applications with focus on software development & IT systems.</p>
+            </article>
+            <article class="info-card">
+              <span class="info-icon">💡</span>
+              <h3>Problem Solver</h3>
+              <p>I break complex problems into elegant, maintainable solutions.</p>
+            </article>
+            <article class="info-card">
+              <span class="info-icon">🚀</span>
+              <h3>Growth Mindset</h3>
+              <p>Always exploring new frameworks, tools, and best practices.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education" id="education">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">02 — Education</span>
+          <h2 class="section-title">Academic <em>journey</em></h2>
+        </header>
+        <div class="timeline reveal" id="educationTimeline">
+          <!-- Dynamically populated from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal -->
+    <section class="section terminal-section" id="terminal">
+      <div class="container">
+        <header class="section-header terminal-header reveal">
+          <h2 class="terminal-title">Interactive Terminal</h2>
+          <div class="terminal-title-line" aria-hidden="true"></div>
+          <p class="terminal-desc">
+            Type commands directly to interact with my resume database, skills profile, and project index.
+          </p>
+        </header>
+
+        <div class="terminal-window reveal" id="terminalWindow">
+          <div class="terminal-chrome">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-chrome-title" id="terminalTitle">guest@portfolio: ~</span>
+          </div>
+          <div class="terminal-body" id="terminalBody" role="log" aria-live="polite"></div>
+          <label class="terminal-mobile-input">
+            <span class="sr-only">Terminal command</span>
+            <input type="text" id="terminalInput" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Type help and press Enter…" />
+          </label>
+        </div>
+
+        <div class="terminal-quick reveal">
+          <span class="terminal-quick-label">Try:</span>
+          <button type="button" class="terminal-chip" data-cmd="help">help</button>
+          <button type="button" class="terminal-chip" data-cmd="github">github</button>
+          <button type="button" class="terminal-chip" data-cmd="linkedin">linkedin</button>
+          <button type="button" class="terminal-chip" data-cmd="skills">skills</button>
+          <button type="button" class="terminal-chip" data-cmd="SELECT * FROM projects;">SELECT * FROM projects;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">03 — Skills &amp; SQL</span>
+          <h2 class="section-title">Tools I <em>work with</em></h2>
+        </header>
+        <p class="section-note reveal">Query live data in the <a href="#terminal">terminal</a>: <code>SELECT * FROM skills;</code></p>
+        <div class="skills-grid reveal">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="90">Java</span>
+              <span class="skill-tag" data-level="85">Python</span>
+              <span class="skill-tag" data-level="88">JavaScript</span>
+              <span class="skill-tag" data-level="80">C / C++</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Web & Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="88">HTML5 & CSS3</span>
+              <span class="skill-tag" data-level="75">Bootstrap</span>
+              <span class="skill-tag" data-level="70">Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Data</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="85">MySQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Other</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="88">Git & GitHub</span>
+              <span class="skill-tag" data-level="75">VS Code</span>
+              <span class="skill-tag" data-level="70">Figma</span>
+              <span class="skill-tag" data-level="65">Linux</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-stacked-wrap reveal">
+          <div class="skills-block">
+            <h3 class="skills-sub-title">Professional Focus</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Full-Stack Development</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Database Design</span><span>82%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>UI / UX Implementation</span><span>78%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3 class="skills-sub-title">Languages Spoken</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Malayalam <span class="language-detail">(Highly Known / Native)</span></span><span>100%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="100"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>English <span class="language-detail">(Highly Known / Fluent)</span></span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Hindi <span class="language-detail">(65% Known)</span></span><span>65%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Tamil <span class="language-detail">(55% Known)</span></span><span>55%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">04 — Projects</span>
+          <h2 class="section-title">Selected <em>work</em></h2>
+        </header>
+        <div class="projects-grid">
+          <article class="project-card reveal featured">
+            <div class="project-img">
+              <img src="Images/aroma.png" alt="Aroma Hub" />
+              <div class="project-overlay">
+                <a href="https://github.com/john77201/Aroma-Hub" class="project-link" aria-label="Live demo">↗</a>
+                <a href="https://github.com/john77201/Aroma-Hub" class="project-link" aria-label="Source code">⌘</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Web · E-Commerce</span>
+              <h3>Aroma Hub</h3>
+              <p>A web application designed to simplify the process of purchasing high-quality spices online.</p>
+              <div class="project-tech">
+                <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>AJAX</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="Images/tourism.png" alt="Tribal Village Tourism" />
+              <div class="project-overlay">
+                <a href="https://github.com/john77201/Tribal-Village-Tourism-Development-Project" class="project-link">↗</a>
+                <a href="https://github.com/john77201/Tribal-Village-Tourism-Development-Project" class="project-link">⌘</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Full Stack · Web</span>
+              <h3>Tribal Village Tourism</h3>
+              <p>A web application to preserve cultural heritage and promote sustainable village tourism with online booking.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Flask</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="Images/travel.png" alt="Nazario Premium Tours" />
+              <div class="project-overlay">
+                <a href="https://github.com/john77201/Nazario-Premium-Tours-Travels" class="project-link">↗</a>
+                <a href="https://github.com/john77201/Nazario-Premium-Tours-Travels" class="project-link">⌘</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Frontend · Web</span>
+              <h3>Nazario Premium Tours</h3>
+              <p>A travel enquiry website to explore destinations, view tour packages, and submit travel enquiries.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="Images/portfolio.png" alt="Portfolio Website" />
+              <div class="project-overlay">
+                <a href="https://github.com/john77201/Portfolio-Website" class="project-link" aria-label="Live demo">↗</a>
+                <a href="https://github.com/john77201/Portfolio-Website" class="project-link" aria-label="Source code">⌘</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Web · Personal</span>
+              <h3>Portfolio Website</h3>
+              <p>A responsive portfolio website highlighting professional experience, technical skills, and project work.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">05 — Contact</span>
+          <h2 class="section-title">Let's build something <em>together</em></h2>
+          <p class="section-note reveal">Or type <code>contact</code> / <code>github</code> / <code>linkedin</code> in the <a href="#terminal">terminal</a>.</p>
+        </header>
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <p>Open to internships, junior developer roles, and freelance projects. Drop a message — I typically reply within 24 hours.</p>
+            <div class="contact-links">
+              <a href="mailto:your.email@example.com" class="contact-item">
+                <span class="contact-icon">✉</span>
+                <span>your.email@example.com</span>
+              </a>
+              <a href="tel:+919876543210" class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span>+91 98765 43210</span>
+              </a>
+              <a href="#" class="contact-item" target="_blank" rel="noopener">
+                <span class="contact-icon">📍</span>
+                <span>Your City, India</span>
+              </a>
+            </div>
+            <div class="social-links" id="socialLinks">
+              <a href="#" id="linkGithub" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" id="linkLinkedin" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="#" id="linkTwitter" class="social-hidden" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
+              <a href="#" id="linkInstagram" class="social-hidden" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+              <a href="#" id="linkLeetcode" class="social-hidden" aria-label="LeetCode" target="_blank" rel="noopener">LC</a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required placeholder="Your name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required placeholder="you@email.com" />
+              </label>
+            </div>
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="Job inquiry / Collaboration" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-note">Form opens your email client — connect Formspree or Netlify Forms for direct submission.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span id="footerName">Your Name</span>. Crafted with passion.</p>
+      <a href="#hero" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Custom Alert Box Overlay -->
+  <div class="alert-overlay" id="alertOverlay" role="dialog" aria-modal="true" aria-labelledby="alertTitle">
+    <div class="alert-box">
+      <div class="alert-icon-wrap">
+        <svg class="alert-check-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h3 class="alert-title" id="alertTitle">Message Ready!</h3>
+      <p class="alert-message" id="alertMessage">Opening your email client to send the message. Thanks for reaching out!</p>
+      <button type="button" class="alert-btn" id="alertBtn">Great</button>
+      <div class="alert-progress" id="alertProgress"></div>
+    </div>
+  </div>
+
+  <!-- Floating Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbotWidget">
+    <button type="button" class="chatbot-trigger" id="chatbotTrigger" aria-label="Open chat assistant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="chat-icon-open">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="chat-icon-close">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+      <span class="chat-notification-dot"></span>
+    </button>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar-wrap">
+          <img src="Images/profile_cutout.png" alt="John Abraham" class="chatbot-avatar" />
+          <span class="chatbot-status-dot"></span>
+        </div>
+        <div class="chatbot-header-text">
+          <h4>John's AI Helper</h4>
+          <span class="chatbot-status-text">Online</span>
+        </div>
+        <button type="button" class="chatbot-close-btn" id="chatbotCloseBtn" aria-label="Close chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      
+      <div class="chatbot-body" id="chatbotBody">
+        <!-- Messages go here -->
+      </div>
+      
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button type="button" class="suggestion-chip" data-query="skills">Skills</button>
+        <button type="button" class="suggestion-chip" data-query="languages">Languages</button>
+        <button type="button" class="suggestion-chip" data-query="projects">Projects</button>
+        <button type="button" class="suggestion-chip" data-query="education">Education</button>
+        <button type="button" class="suggestion-chip" data-query="contact">Contact</button>
+      </div>
+      
+      <form class="chatbot-input-area" id="chatbotInputArea">
+        <input type="text" id="chatbotInput" placeholder="Ask me something..." autocomplete="off" />
+        <button type="submit" class="chatbot-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="terminal.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
